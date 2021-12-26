@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1 id="H1"></h1>
+        <input id="T1" type="text"/>
+        <script type="text/javascript">
+           t1  = document.getElementById("T1")
+	        t1.addEventListener("keyup",handler2)
+	        h1 = document.getElementById("H1")
+	
+	        function handler2()
+	        {
+	            h1.innerText = t1.value
+	        }
+        </script>
+    </body>
+</html>
