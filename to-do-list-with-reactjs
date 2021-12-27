@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<script crossdomain src="https://unpkg.com/react@16/umd/react.development.js"> </script>
+		<script crossdomain src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"> </script>
+		<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"> </script>
+	</head>
+	<body>
+		<div id = "root"></div>
+		<script type = "text/babel">
+			class T extends React.Component
+			{
+				constructor()
+				{
+					super()
+					this.state={task:""}
+				}
+				render()
+				{
+					return(<div><p>Add item : <input id="I1" type="text"/><button onClick={this.add}>Add</button></p>
+					<h1 id="Hey">{this.state.task}</h1>
+					</div>)
+				}
+				add=()=>
+				{
+					var p=document.getElementById("Hey")
+					var q=document.getElementById("I1")
+					this.setState({task:this.state.task+q.value})
+				}
+			}
+			ReactDOM.render(<T/>,document.getElementById("root"))
+		</script>
+	</body>
+</html>
